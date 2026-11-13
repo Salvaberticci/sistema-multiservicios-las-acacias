@@ -80,6 +80,11 @@ Bitácora de sesiones. Añadir una entrada al terminar cambios relevantes.
 - README actualizado con la sección "Inicio rápido en Windows".
 - **Pendiente:** probar la apertura automática del navegador en una sesión de escritorio (el resto del flujo ya se verificó).
 
+## 2026-11-13 — Metaheurística definida
+- Registrada la metaheurística del proyecto: **algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles**.
+- Documentada en `memoria-ia/metaheuristica.md`; aún no implementada.
+- **Pendiente:** definir función de aptitud, restricciones, parámetros genéticos y ubicación en la interfaz.
+
 ## Plantilla
 
 ```markdown

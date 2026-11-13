@@ -42,6 +42,7 @@
 
 ## Dominio y reglas
 - Módulos: facturación/cobros, inventario, entradas/salidas de vehículos, lavados/comisiones, auditoría y seguridad/usuarios.
+- **Metaheurística:** algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles. Aún no implementado; ver `memoria-ia/metaheuristica.md`. No asumir función de aptitud ni parámetros.
 - Cada lavado registra vehículo, tamaño, empleado, fecha/hora, precio y comisión; el historial debe mostrar la fecha del lavado.
 - El tamaño (pequeño/mediano/grande) determina la tarifa.
 - Tarifas, totales y comisiones se calculan en el servidor; no confiar en valores del cliente (hoy el demo calcula en JS porque no hay backend).

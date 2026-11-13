@@ -22,6 +22,7 @@
 | 2026-11-13 | Publicar en GitHub: `Salvaberticci/sistema-multiservicios-las-acacias` | Compartir el proyecto y permitir clonarlo |
 | 2026-11-13 | No versionar `tools/tailwindcss.exe` | Pesa ~111 MB y supera el límite de GitHub; se documenta su descarga |
 | 2026-11-13 | Script de arranque local `iniciar.bat` + `iniciar.ps1` | Automatiza instalación, `.env`, SQLite, migraciones, servidor y apertura del navegador |
+| 2026-11-13 | Metaheurística: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles | Definido por el usuario/profesora; aún no implementado |
 
 ## Abiertas (no asumir)
 - Nombre de la base de datos.
@@ -33,5 +34,7 @@
 - Numeración, impuestos y PDF/impresión de facturas.
 - Métodos de pago y manejo de anulaciones.
 - Fórmula de comisión por lavado.
+- Función de aptitud y restricciones del algoritmo genético.
+- Datos de entrada/salida y módulo de la interfaz donde se mostrará la metaheurística.
 - Identificación de vehículos/clientes y reglas de entrada/salida.
 - Nombres de modelos/tablas: inglés o español.

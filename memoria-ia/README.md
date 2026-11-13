@@ -5,6 +5,7 @@ Carpeta de contexto persistente para agentes que trabajen en este repositorio. N
 ## Archivos
 - `contexto.md` — negocio, alcance y usuarios.
 - `modulos.md` — requisitos funcionales por módulo y reglas de negocio.
+- `metaheuristica.md` — definición y pendientes del algoritmo genético de ordenamiento.
 - `arquitectura.md` — stack, entorno y restricciones técnicas.
 - `decisiones.md` — decisiones tomadas y decisiones abiertas.
 - `paleta-colores.md` — paleta y reglas de color del sistema (azul, blanco, rojo del logo).

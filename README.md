@@ -3,6 +3,8 @@
 Sistema de gestión para **Multiservicios Las Acacias**: cobro y facturación, inventario, entrada/salida de vehículos, lavados y comisiones, auditoría y seguridad.
 
 > **Estado actual:** demo funcional de frontend. Los datos se guardan en `localStorage` y el inicio de sesión es simulado. No hay controladores, modelos ni migraciones de dominio; la base de datos solo contiene las tablas base de Laravel. El contexto completo está en `memoria-ia/`.
+>
+> **Metaheurística planificada:** algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles (aún no implementado).
 
 ## Inicio rápido en Windows
 

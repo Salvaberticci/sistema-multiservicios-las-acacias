@@ -10,6 +10,7 @@
 - Clasificación del vehículo por tamaño: pequeño, mediano o grande.
 - Lavados: empleado que lava, vehículo, fecha/hora, precio y comisión.
 - Historial de lavados con fecha visible.
+- Optimización con metaheurística: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles.
 - Auditoría forense de acciones críticas.
 - Seguridad: autenticación y permisos por rol.
 
@@ -20,5 +21,6 @@
 ## Estado
 - Laravel 12 scaffolded con frontend demo: Blade + Tailwind 4 + Alpine + GSAP.
 - Los datos viven en `localStorage`; no hay backend de dominio ni autenticación real.
+- Metaheurística definida (algoritmo genético), aún no implementada.
 - Repositorio git inicializado y publicado en GitHub: `Salvaberticci/sistema-multiservicios-las-acacias` (rama `main`).
 - La guía de instalación y ejecución local está en `README.md`.

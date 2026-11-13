@@ -22,6 +22,11 @@
 - El historial debe mostrar la fecha del lavado.
 - **Pendiente:** fórmula de comisión, empleados por turno, servicios adicionales.
 
+## Metaheurística / planificación
+- Tipo: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles.
+- Estado: definido; no implementado.
+- **Pendiente:** función de aptitud, restricciones, datos de entrada/salida, parámetros genéticos y módulo de la interfaz.
+
 ## Auditoría forense
 - Bitácora persistida en base de datos, no solo en `storage/logs`.
 - Registrar acciones críticas: cobros, facturas, comisiones, movimientos de inventario y accesos.
