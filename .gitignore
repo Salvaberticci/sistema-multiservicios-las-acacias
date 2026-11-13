@@ -25,5 +25,7 @@ yarn-error.log
 /database/*.sqlite-journal
 /tools/*.exe
 *.log
+*.rar
+*.zip
 .DS_Store
 Thumbs.db
