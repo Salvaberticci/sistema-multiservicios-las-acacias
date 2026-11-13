@@ -33,14 +33,17 @@ if (-not $php) {
     }
 }
 
-# Composer
-$composer = (Get-Command composer -ErrorAction SilentlyContinue).Source
-if (-not $composer) {
-    Fail "Composer no encontrado. Instala Composer y agregalo al PATH."
+# Composer (solo se necesita si falta vendor)
+$composer = $null
+if (-not (Test-Path "vendor\autoload.php")) {
+    $composer = (Get-Command composer -ErrorAction SilentlyContinue).Source
+    if (-not $composer) {
+        Fail "Falta la carpeta vendor y Composer no esta instalado. Pide la carpeta completa del proyecto o instala Composer."
+    }
 }
 
 Write-Host "PHP: $(& $php -r 'echo PHP_VERSION;')"
-Write-Host "Composer: $composer"
+if ($composer) { Write-Host "Composer: $composer" }
 
 # Dependencias PHP
 if (-not (Test-Path "vendor\autoload.php")) {
