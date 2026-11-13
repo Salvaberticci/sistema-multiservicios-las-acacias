@@ -58,7 +58,7 @@
                 <button type="submit" class="btn-primary flex-1 py-2.5 rounded-lg font-medium transition" :disabled="saving">
                     <span x-show="!saving">Guardar usuario</span>
                     <span x-show="saving" class="flex items-center gap-2">
-                        <svg class="w-4 h-4 animate-spin text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.562m8.94l-1.898-1.898M12 9v2m0 4v3m2-3v2m-5.5-3A7.953 7.953 0 014 12C4 8.694 5.694 7 8 7m0 0a4.959 4.959 0 011.54 3.033M7 23l-3.5-7m5.618 3.47a1 1 0 01.717.694m14.384.728a1 1 0 01-.717.694M21 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <svg class="w-4 h-4 animate-spin text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-6.219-8.56"></path></svg>
                         Guardando...
                     </span>
                 </button>

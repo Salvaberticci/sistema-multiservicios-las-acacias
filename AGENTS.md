@@ -41,8 +41,9 @@
 - No dejar estilos inline de entrada (`:style="{ opacity: 0 }"`) en filas/tarjetas animadas: Alpine los reaplica y el contenido queda invisible.
 
 ## Dominio y reglas
-- Módulos: facturación/cobros, inventario, entradas/salidas de vehículos, lavados/comisiones, auditoría y seguridad/usuarios.
-- **Metaheurística:** algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles. Se integra en **Vehículos** (ordenamiento de vehículos en espera) y **Lavados** (ordenamiento/asignación de trabajadores disponibles), no como módulo aparte. Aún no implementado; ver `memoria-ia/metaheuristica.md`. No asumir función de aptitud ni parámetros.
+- Módulos: facturación/cobros, inventario, entradas/salidas de vehículos, lavados/comisiones, empleados/personal, auditoría y seguridad/usuarios.
+- Los empleados de lavado se registran en **Empleados** (`/empleados`, store `Stores.empleados`); no volver a hardcodear listas en las vistas de lavados.
+- **Metaheurística:** algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles. Se integra en **Vehículos** (`/vehiculos/planificacion`) y **Lavados** (`/lavados/planificacion`), no como módulo aparte. Hay un prototipo frontend de demostración en `public/js/metaheuristica.js`; la función de aptitud definitiva sigue pendiente (ver `memoria-ia/metaheuristica.md`). No asumir la aptitud ni los parámetros como definitivos.
 - Cada lavado registra vehículo, tamaño, empleado, fecha/hora, precio y comisión; el historial debe mostrar la fecha del lavado.
 - El tamaño (pequeño/mediano/grande) determina la tarifa.
 - Tarifas, totales y comisiones se calculan en el servidor; no confiar en valores del cliente (hoy el demo calcula en JS porque no hay backend).

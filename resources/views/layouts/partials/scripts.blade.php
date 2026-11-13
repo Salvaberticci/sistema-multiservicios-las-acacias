@@ -5,6 +5,7 @@
 
 <!-- Datos y componentes -->
 <script src="/js/stores.js" defer></script>
+<script src="/js/metaheuristica.js" defer></script>
 <script src="/js/components.js" defer></script>
 <script src="/js/animations.js" defer></script>
 <script src="/js/app.js" defer></script>

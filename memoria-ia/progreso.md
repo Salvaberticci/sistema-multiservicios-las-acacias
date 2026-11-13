@@ -86,6 +86,15 @@ Bitácora de sesiones. Añadir una entrada al terminar cambios relevantes.
 - **Ubicación:** se integra en los módulos **Vehículos** (ordenamiento de vehículos en espera) y **Lavados** (ordenamiento/asignación de trabajadores disponibles), no como módulo aparte.
 - **Pendiente:** definir función de aptitud, restricciones, parámetros genéticos y diseño de la vista en Vehículos y Lavados.
 
+## 2026-11-13 — Módulo Empleados y pantallas de planificación
+- Añadido el módulo **Empleados** (`/empleados`): listado con filtros, alta y edición; store `Stores.empleados` en `localStorage`.
+- Lavados ahora toma los empleados activos del store; se eliminaron las listas hardcodeadas de las vistas.
+- Añadidas las pantallas de planificación: `/vehiculos/planificacion` y `/lavados/planificacion`.
+- Prototipo de algoritmo genético en `public/js/metaheuristica.js`, con aptitud provisional y aviso de demostración en la UI.
+- Enlaces a planificación en los listados de Vehículos y Lavados; ítem **Empleados** en el menú de Operación.
+- Verificación headless: alta de empleado, generación de propuestas y navegación por las pantallas nuevas; 0 errores de consola y 0 peticiones fallidas (corregido un `<path>` SVG inválido preexistente).
+- **Pendiente:** función de aptitud definitiva, persistencia de la planificación y backend real.
+
 ## Plantilla
 
 ```markdown

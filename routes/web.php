@@ -81,6 +81,10 @@ Route::middleware('web')->group(function () {
             return view('vehiculos.salida', ['placa' => $placa]);
         })->name('salida');
 
+        Route::get('/planificacion', function () {
+            return view('vehiculos.planificacion');
+        })->name('planificacion');
+
         Route::get('/{id}', function ($id) {
             return view('vehiculos.show', ['id' => $id]);
         })->name('show');
@@ -96,12 +100,31 @@ Route::middleware('web')->group(function () {
             return view('lavados.create');
         })->name('create');
 
+        Route::get('/planificacion', function () {
+            return view('lavados.planificacion');
+        })->name('planificacion');
+
         Route::get('/{id}', function ($id) {
             return view('lavados.show', ['id' => $id]);
         })->name('show');
 
         Route::get('/{id}/edit', function ($id) {
             return view('lavados.edit', ['id' => $id]);
+        })->name('edit');
+    });
+
+    // Empleados / personal de lavado
+    Route::prefix('empleados')->name('empleados.')->group(function () {
+        Route::get('/', function () {
+            return view('empleados.index');
+        })->name('index');
+
+        Route::get('/create', function () {
+            return view('empleados.create');
+        })->name('create');
+
+        Route::get('/{id}/edit', function ($id) {
+            return view('empleados.edit', ['id' => $id]);
         })->name('edit');
     });
 

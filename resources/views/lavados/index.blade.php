@@ -10,10 +10,16 @@
             <h1 class="text-2xl font-bold text-gray-900">Lavados</h1>
             <p class="text-gray-500 mt-1">Registro de lavados y comisiones</p>
         </div>
-        <a href="/lavados/create" class="btn-primary px-4 py-2.5 flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-            Registrar lavado
-        </a>
+        <div class="flex items-center gap-3">
+            <a href="/lavados/planificacion" class="btn-secondary px-4 py-2.5 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                Asignación
+            </a>
+            <a href="/lavados/create" class="btn-primary px-4 py-2.5 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                Registrar lavado
+            </a>
+        </div>
     </div>
     
     <!-- Stats -->
@@ -149,16 +155,12 @@
             tamanoFilter: '',
             estadoFilter: '',
             lavados: [],
-            empleados: [
-                { id: 1, nombre: 'Carlos Ruiz' },
-                { id: 2, nombre: 'Miguel Torres' },
-                { id: 3, nombre: 'Javier Ortiz' },
-                { id: 4, nombre: 'Antonio Vega' }
-            ],
+            empleados: [],
             stats: { totalHoy: 0, ingresoHoy: 0, comisionHoy: 0, totalMes: 0 },
             
             init() {
                 this.lavados = this.$store.lavados.getAll();
+                this.empleados = this.$store.empleados.getAll();
                 this.updateStats();
                 this.$nextTick(() => this.animateEntrance());
             },

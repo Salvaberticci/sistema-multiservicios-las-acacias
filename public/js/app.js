@@ -31,6 +31,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.store('auth', window.Stores.auth);
     Alpine.store('facturas', window.Stores.facturas);
     Alpine.store('clientes', window.Stores.clientes);
+    Alpine.store('empleados', window.Stores.empleados);
     Alpine.store('vehiculos', window.Stores.vehiculos);
     Alpine.store('lavados', window.Stores.lavados);
     Alpine.store('inventario', window.Stores.inventario);
@@ -72,6 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: 'Nueva factura', description: 'Crear factura', action: () => (window.location.href = '/facturacion/create') },
         { label: 'Registrar entrada vehículo', description: 'Entrada de vehículo', action: () => (window.location.href = '/vehiculos/entrada') },
         { label: 'Registrar lavado', description: 'Nuevo lavado', action: () => (window.location.href = '/lavados/create') },
+        { label: 'Nuevo empleado', description: 'Alta de personal', action: () => (window.location.href = '/empleados/create') },
+        { label: 'Planificación de vehículos', description: 'Orden de atención', action: () => (window.location.href = '/vehiculos/planificacion') },
+        { label: 'Asignación de trabajadores', description: 'Planificación de lavados', action: () => (window.location.href = '/lavados/planificacion') },
         { label: 'Nuevo producto', description: 'Inventario', action: () => (window.location.href = '/inventario/create') },
         { label: 'Dashboard', description: 'Ir al dashboard', action: () => (window.location.href = '/dashboard') },
         { label: 'Ajustes', description: 'Configuración', action: () => (window.location.href = '/ajustes') },

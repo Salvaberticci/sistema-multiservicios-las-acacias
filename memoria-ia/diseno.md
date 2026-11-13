@@ -52,6 +52,9 @@ Rediseño completo del frontend hecho el **2026-11-13**, sin npm/Vite. Todo el e
   accesos demo.
 - Dashboard: hero con saludo, gauge de meta diaria, 4 KPIs, gráfico de canvas con degradado y curva
   suavizada, accesos rápidos, vehículos dentro y actividad reciente.
+- Empleados: listado con KPIs por turno, filtros, alta y edición; avatar con iniciales y estado activo/inactivo.
+- Planificación (`/vehiculos/planificacion` y `/lavados/planificacion`): KPIs, aviso de demostración,
+  parámetros del algoritmo genético, tabla de orden/asignación y panel de carga por trabajador.
 - Toasts y `confirmDialog` rediseñados en glass oscuro.
 
 ## Animaciones

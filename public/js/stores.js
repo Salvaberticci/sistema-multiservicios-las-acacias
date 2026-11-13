@@ -316,6 +316,89 @@ Stores.clientes = {
 };
 
 // ============================================
+// STORE: EMPLEADOS (personal de lavado)
+// ============================================
+Stores.empleados = {
+    items: [],
+
+    init() {
+        const saved = Storage.get('empleados');
+        if (saved) {
+            this.items = saved;
+        } else {
+            this.seed();
+        }
+        return this;
+    },
+
+    seed() {
+        const base = [
+            { nombre: 'Carlos Ruiz', telefono: '612 480 931', email: 'carlos.ruiz@acacias.com', cargo: 'Lavador', turno: 'mañana', activo: true, fechaIngreso: '2024-03-12', observaciones: '' },
+            { nombre: 'Miguel Torres', telefono: '634 118 207', email: 'miguel.torres@acacias.com', cargo: 'Lavador', turno: 'mañana', activo: true, fechaIngreso: '2024-06-03', observaciones: '' },
+            { nombre: 'Javier Ortiz', telefono: '655 903 214', email: 'javier.ortiz@acacias.com', cargo: 'Lavador', turno: 'tarde', activo: true, fechaIngreso: '2024-09-18', observaciones: '' },
+            { nombre: 'Antonio Vega', telefono: '601 774 382', email: 'antonio.vega@acacias.com', cargo: 'Lavador', turno: 'tarde', activo: true, fechaIngreso: '2025-01-20', observaciones: '' },
+            { nombre: 'Sofía Delgado', telefono: '688 221 540', email: 'sofia.delgado@acacias.com', cargo: 'Supervisor', turno: 'completo', activo: true, fechaIngreso: '2023-11-07', observaciones: '' }
+        ];
+        this.items = base.map((empleado, index) => Object.assign({ id: index + 1 }, empleado));
+        this.save();
+    },
+
+    save() {
+        Storage.set('empleados', this.items);
+    },
+
+    getAll() {
+        return [...this.items].sort((a, b) => a.nombre.localeCompare(b.nombre));
+    },
+
+    getActivos() {
+        return this.getAll().filter(e => e.activo);
+    },
+
+    getById(id) {
+        return this.items.find(e => e.id == id);
+    },
+
+    create(data) {
+        const empleado = { id: Date.now(), ...data, activo: data.activo !== false };
+        this.items.push(empleado);
+        this.save();
+        Stores.auditoria.log('crear', 'empleado', empleado.id, { nombre: empleado.nombre });
+        return empleado;
+    },
+
+    update(id, data) {
+        const idx = this.items.findIndex(e => e.id == id);
+        if (idx !== -1) {
+            this.items[idx] = { ...this.items[idx], ...data };
+            this.save();
+            Stores.auditoria.log('editar', 'empleado', id, data);
+        }
+    },
+
+    toggleStatus(id) {
+        const empleado = this.getById(id);
+        if (empleado) {
+            empleado.activo = !empleado.activo;
+            this.save();
+            Stores.auditoria.log(empleado.activo ? 'activar' : 'desactivar', 'empleado', id, { nombre: empleado.nombre });
+            return empleado.activo;
+        }
+        return false;
+    },
+
+    getStats() {
+        return {
+            total: this.items.length,
+            activos: this.items.filter(e => e.activo).length,
+            inactivos: this.items.filter(e => !e.activo).length,
+            manana: this.items.filter(e => e.activo && e.turno === 'mañana').length,
+            tarde: this.items.filter(e => e.activo && e.turno === 'tarde').length
+        };
+    }
+};
+
+// ============================================
 // STORE: VEHICULOS
 // ============================================
 Stores.vehiculos = {
@@ -496,13 +579,9 @@ Stores.lavados = {
     seed() {
 
         const vehiculos = Stores.vehiculos.items || [];
-        const empleados = [
-            { id: 1, nombre: 'Carlos Ruiz' },
-            { id: 2, nombre: 'Miguel Torres' },
-            { id: 3, nombre: 'Javier Ortiz' },
-            { id: 4, nombre: 'Antonio Vega' },
-            { id: 5, nombre: 'Sofía Delgado' }
-        ];
+        const empleados = Stores.empleados.items.length
+            ? Stores.empleados.items
+            : [{ id: 1, nombre: 'Carlos Ruiz' }];
         const precios = { 'pequeño': 12, 'mediano': 20, 'grande': 30 };
 
         this.items = [];
@@ -983,16 +1062,17 @@ Stores.users = {
 // INICIALIZAR TODOS LOS STORES
 // ============================================
 // Versión del set de datos demo: al cambiarla se regeneran los datos de prueba
-const DEMO_VERSION = '2026-11-13-a';
+const DEMO_VERSION = '2026-11-13-b';
 
 function initStores() {
     if (Storage.get('demoVersion') !== DEMO_VERSION) {
-        ['facturas', 'clientes', 'vehiculos', 'lavados', 'inventario', 'auditoria'].forEach((key) => Storage.remove(key));
+        ['facturas', 'clientes', 'vehiculos', 'lavados', 'inventario', 'auditoria', 'empleados'].forEach((key) => Storage.remove(key));
         Storage.set('demoVersion', DEMO_VERSION);
     }
 
     Stores.auth.init();
     Stores.clientes.init();
+    Stores.empleados.init();
     Stores.facturas.init();
     Stores.vehiculos.init();
     Stores.lavados.init();

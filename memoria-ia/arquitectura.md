@@ -7,6 +7,7 @@
 - **Estilos:** Tailwind CSS 4 compilado con el CLI standalone (`tools/tailwindcss.exe`) desde `resources/css/app.css` hacia `public/css/app.css`. El tema vive en `@theme`. El binario no se versiona (111 MB); ver `tools/README.md`.
 - **Animaciones:** GSAP + ScrollTrigger + Flip vendorizados en `public/js/vendor/`.
 - **Datos (temporal):** stores JS en `public/js/stores.js` sobre `localStorage`, con datos demo deterministas versionados por `DEMO_VERSION`.
+- **Metaheurística (prototipo):** `public/js/metaheuristica.js` expone `window.Metaheuristica` (algoritmo genético de demostración para ordenar vehículos y asignar trabajadores).
 - **Diseño:** sistema profesional/futurista documentado en `memoria-ia/diseno.md` (shell oscuro, lienzo claro, GSAP, motivo automotriz).
 - **Base de datos:** MySQL/MariaDB de XAMPP (pendiente de configurar; hoy `.env` apunta a SQLite).
 - **Build:** ninguno. No hay npm, `package.json`, Vite ni `node_modules`.

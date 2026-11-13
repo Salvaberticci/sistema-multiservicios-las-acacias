@@ -24,6 +24,8 @@
 | 2026-11-13 | Script de arranque local `iniciar.bat` + `iniciar.ps1` | Automatiza instalación, `.env`, SQLite, migraciones, servidor y apertura del navegador |
 | 2026-11-13 | Metaheurística: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles | Definido por el usuario/profesora; aún no implementado |
 | 2026-11-13 | Ubicación de la metaheurística: módulos de Vehículos y Lavados | No es módulo aparte; Vehículos ordena los vehículos en espera y Lavados ordena/asigna trabajadores disponibles |
+| 2026-11-13 | Módulo Empleados con CRUD en `localStorage` | Registra el personal de lavado y alimenta Lavados y la planificación; sustituye las listas hardcodeadas |
+| 2026-11-13 | Prototipo frontend del algoritmo genético con aptitud provisional | Permite mostrar las pantallas de planificación; la función de aptitud definitiva queda pendiente de la profesora |
 
 ## Abiertas (no asumir)
 - Nombre de la base de datos.
@@ -35,7 +37,7 @@
 - Numeración, impuestos y PDF/impresión de facturas.
 - Métodos de pago y manejo de anulaciones.
 - Fórmula de comisión por lavado.
-- Función de aptitud y restricciones del algoritmo genético.
-- Datos de entrada/salida y diseño de la vista de planificación en Vehículos y Lavados.
+- Función de aptitud y restricciones definitivas del algoritmo genético.
+- Datos de entrada/salida y validación de la planificación en Vehículos y Lavados.
 - Identificación de vehículos/clientes y reglas de entrada/salida.
 - Nombres de modelos/tablas: inglés o español.
