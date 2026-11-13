@@ -72,6 +72,13 @@ Bitácora de sesiones. Añadir una entrada al terminar cambios relevantes.
 - Corregido el test de `/` para esperar la redirección a login; la suite pasa (3 tests).
 - Publicado en GitHub: `https://github.com/Salvaberticci/sistema-multiservicios-las-acacias` (rama `main`, commit inicial `34c1cf0`).
 
+## 2026-11-13 — Script de arranque local
+- Añadidos `iniciar.bat` e `iniciar.ps1`: instalan dependencias si faltan, crean `.env`, generan `APP_KEY`, preparan SQLite, aplican migraciones, buscan un puerto libre, inician `php artisan serve` y abren el navegador.
+- Probado en modo `-NoServe` y con servidor real (`-NoBrowser`): `/login` respondió HTTP 200; el proceso PHP se detuvo después de la prueba.
+- `iniciar.bat` probado con `-NoServe`; el wrapper reenvía argumentos al `.ps1`.
+- README actualizado con la sección "Inicio rápido en Windows".
+- **Pendiente:** probar la apertura automática del navegador en una sesión de escritorio (el resto del flujo ya se verificó).
+
 ## Plantilla
 
 ```markdown

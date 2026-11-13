@@ -21,6 +21,7 @@
 | 2026-11-12 | Paleta de colores: azul, blanco y rojo (tomados del logo) | Identidad visual debe coincidir con `logo.jpeg`; detalle en `paleta-colores.md` |
 | 2026-11-13 | Publicar en GitHub: `Salvaberticci/sistema-multiservicios-las-acacias` | Compartir el proyecto y permitir clonarlo |
 | 2026-11-13 | No versionar `tools/tailwindcss.exe` | Pesa ~111 MB y supera el límite de GitHub; se documenta su descarga |
+| 2026-11-13 | Script de arranque local `iniciar.bat` + `iniciar.ps1` | Automatiza instalación, `.env`, SQLite, migraciones, servidor y apertura del navegador |
 
 ## Abiertas (no asumir)
 - Nombre de la base de datos.

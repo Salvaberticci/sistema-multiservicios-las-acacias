@@ -20,6 +20,7 @@
 - Shell: PowerShell (o bash). No hay `make` ni scripts de tarea propios.
 
 ## Comandos
+- `.\iniciar.bat`: arranque local completo en Windows (instala dependencias, crea `.env`/SQLite, migra, sirve y abre el navegador).
 - `composer dev`: solo `php artisan serve` (no incluye Vite ni colas; no hay frontend que compilar).
 - `php artisan migrate --seed`: migraciones (SQLite por defecto; configurar `.env` para MySQL).
 - `php artisan test` / `php artisan test --filter=NombreDelTest`: suite PHPUnit (SQLite `:memory:`).

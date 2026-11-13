@@ -4,6 +4,18 @@ Sistema de gestión para **Multiservicios Las Acacias**: cobro y facturación, i
 
 > **Estado actual:** demo funcional de frontend. Los datos se guardan en `localStorage` y el inicio de sesión es simulado. No hay controladores, modelos ni migraciones de dominio; la base de datos solo contiene las tablas base de Laravel. El contexto completo está en `memoria-ia/`.
 
+## Inicio rápido en Windows
+
+1. Haz doble clic en `iniciar.bat` (o ejecuta `.\iniciar.bat` desde PowerShell).
+2. El script instala dependencias, crea `.env`, genera la clave, prepara SQLite, aplica migraciones, inicia el servidor y abre el navegador.
+3. Inicia sesión con `admin@acacias.com` / `admin123`.
+
+La primera vez puede tardar por `composer install`. Si usas MySQL, configura `.env` antes de ejecutar el script; si no, usará SQLite. Para detener el servidor, cierra la ventana que se abre con el servidor o pulsa `Ctrl+C` en ella.
+
+Si el navegador no se abre automáticamente, entra manualmente a la URL que muestra la ventana del script (por ejemplo, `http://127.0.0.1:8000`).
+
+Si prefieres hacerlo manualmente, sigue los pasos de abajo.
+
 ## Stack
 
 - **Laravel 12** / PHP 8.2+
