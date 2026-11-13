@@ -70,7 +70,7 @@ Bitácora de sesiones. Añadir una entrada al terminar cambios relevantes.
 - Añadido `tools/README.md` con instrucciones para descargar el CLI standalone.
 - Actualizado `.env.example`: nombre del proyecto, locale español, `APP_URL` y bloque comentado de MySQL.
 - Corregido el test de `/` para esperar la redirección a login; la suite pasa (3 tests).
-- Publicación en GitHub: pendiente de ejecutar el push.
+- Publicado en GitHub: `https://github.com/Salvaberticci/sistema-multiservicios-las-acacias` (rama `main`, commit inicial `34c1cf0`).
 
 ## Plantilla
 

@@ -20,5 +20,5 @@
 ## Estado
 - Laravel 12 scaffolded con frontend demo: Blade + Tailwind 4 + Alpine + GSAP.
 - Los datos viven en `localStorage`; no hay backend de dominio ni autenticación real.
-- Repositorio git inicializado y preparado para publicarse en GitHub.
+- Repositorio git inicializado y publicado en GitHub: `Salvaberticci/sistema-multiservicios-las-acacias` (rama `main`).
 - La guía de instalación y ejecución local está en `README.md`.
