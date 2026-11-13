@@ -23,6 +23,7 @@
 | 2026-11-13 | No versionar `tools/tailwindcss.exe` | Pesa ~111 MB y supera el límite de GitHub; se documenta su descarga |
 | 2026-11-13 | Script de arranque local `iniciar.bat` + `iniciar.ps1` | Automatiza instalación, `.env`, SQLite, migraciones, servidor y apertura del navegador |
 | 2026-11-13 | Metaheurística: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles | Definido por el usuario/profesora; aún no implementado |
+| 2026-11-13 | Ubicación de la metaheurística: módulos de Vehículos y Lavados | No es módulo aparte; Vehículos ordena los vehículos en espera y Lavados ordena/asigna trabajadores disponibles |
 
 ## Abiertas (no asumir)
 - Nombre de la base de datos.
@@ -35,6 +36,6 @@
 - Métodos de pago y manejo de anulaciones.
 - Fórmula de comisión por lavado.
 - Función de aptitud y restricciones del algoritmo genético.
-- Datos de entrada/salida y módulo de la interfaz donde se mostrará la metaheurística.
+- Datos de entrada/salida y diseño de la vista de planificación en Vehículos y Lavados.
 - Identificación de vehículos/clientes y reglas de entrada/salida.
 - Nombres de modelos/tablas: inglés o español.

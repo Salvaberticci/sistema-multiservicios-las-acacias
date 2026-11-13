@@ -80,10 +80,11 @@ Bitácora de sesiones. Añadir una entrada al terminar cambios relevantes.
 - README actualizado con la sección "Inicio rápido en Windows".
 - **Pendiente:** probar la apertura automática del navegador en una sesión de escritorio (el resto del flujo ya se verificó).
 
-## 2026-11-13 — Metaheurística definida
+## 2026-11-13 — Metaheurística definida y ubicada
 - Registrada la metaheurística del proyecto: **algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles**.
 - Documentada en `memoria-ia/metaheuristica.md`; aún no implementada.
-- **Pendiente:** definir función de aptitud, restricciones, parámetros genéticos y ubicación en la interfaz.
+- **Ubicación:** se integra en los módulos **Vehículos** (ordenamiento de vehículos en espera) y **Lavados** (ordenamiento/asignación de trabajadores disponibles), no como módulo aparte.
+- **Pendiente:** definir función de aptitud, restricciones, parámetros genéticos y diseño de la vista en Vehículos y Lavados.
 
 ## Plantilla
 

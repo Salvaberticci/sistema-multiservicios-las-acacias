@@ -10,7 +10,7 @@
 - Clasificación del vehículo por tamaño: pequeño, mediano o grande.
 - Lavados: empleado que lava, vehículo, fecha/hora, precio y comisión.
 - Historial de lavados con fecha visible.
-- Optimización con metaheurística: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles.
+- Optimización con metaheurística: algoritmo genético adaptado al ordenamiento de vehículos y trabajadores disponibles, integrado en los módulos de Vehículos y Lavados.
 - Auditoría forense de acciones críticas.
 - Seguridad: autenticación y permisos por rol.
 
